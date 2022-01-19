@@ -1,0 +1,14 @@
+/.vs
+/OrderService/.vs
+/OrderService/FastMeal.OrderService/bin
+/OrderService/FastMeal.OrderService/obj
+/OrderService/FastMeal.OrderService.Tests/bin
+/OrderService/FastMeal.OrderService.Tests/obj
+/ConsumerService/.vs
+/ConsumerService/FastMeal.ConsumerService/bin
+/ConsumerService/FastMeal.ConsumerService/obj
+/KitchenService/.vs
+/KitchenService/FastMeal.KitchenService/bin
+/KitchenService/FastMeal.KitchenService/obj
+
+
