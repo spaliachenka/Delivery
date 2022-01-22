@@ -1,4 +1,4 @@
-namespace FastMeal.OrderService
+namespace FastMeal.AccountingService
 {
     public class WeatherForecast
     {

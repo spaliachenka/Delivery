@@ -12,3 +12,17 @@
 /KitchenService/FastMeal.KitchenService/obj
 
 
+/AccountingService/.vs
+/AccountingService/FastMeal.AccountingService/bin
+/AccountingService/FastMeal.AccountingService/obj
+/RestaurantService/FastMeal.RestaurantService/bin
+/RestaurantService/FastMeal.RestaurantService/obj
+/RestaurantService/.vs
+/DeliveryService/FastMeal.DeliveryService/bin
+/DeliveryService/FastMeal.DeliveryService/obj
+/DeliveryService/.vs
+/CodeStyle/.vs
+/CodeStyle/bin
+/CodeStyle/obj
+/OrderService/FastMeal.OrderService.Domain/bin
+/OrderService/FastMeal.OrderService.Domain/obj

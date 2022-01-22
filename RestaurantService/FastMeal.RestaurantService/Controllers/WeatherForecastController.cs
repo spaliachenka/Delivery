@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace FastMeal.OrderService.Controllers
+namespace FastMeal.RestaurantService.Controllers
 {
     [ApiController]
     [Route("[controller]")]
