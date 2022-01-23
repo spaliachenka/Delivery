@@ -365,7 +365,7 @@ dotnet_diagnostic.SA1003.severity = error
 dotnet_diagnostic.SA1309.severity = none
 
 # IDE0005: Using directive is unnecessary.
-dotnet_diagnostic.IDE0005.severity = warning
+dotnet_diagnostic.IDE0005.severity = error
 
 # SA1610: Property documentation should have value text
 dotnet_diagnostic.SA1610.severity = none
@@ -444,3 +444,21 @@ dotnet_diagnostic.SA1602.severity = none
 
 # SA1127: Generic type constraints should be on their own line
 dotnet_diagnostic.SA1127.severity = none
+
+[*.{cs,vb}]
+tab_width=4
+
+# SA1200: Using directives should be placed correctly
+dotnet_diagnostic.SA1200.severity = none
+
+# CA1822: Mark members as static
+dotnet_diagnostic.CA1822.severity = warning
+
+# CA2245: Do not assign a property to itself
+dotnet_diagnostic.CA2245.severity = warning
+
+# SA1518: Use line endings correctly at end of file
+dotnet_diagnostic.SA1518.severity = error
+
+# SA1601: Partial elements should be documented
+dotnet_diagnostic.SA1601.severity = none
