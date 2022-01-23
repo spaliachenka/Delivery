@@ -6,3 +6,5 @@ This app is my attempt to realize patterns and approaches about microservice app
 
 English original book: Richardson Chris. Microservices Patterns: With examples in Java. - Manning Publications, 2019. — 520 p. — ISBN: 978-1617294549.
 Translated in russian: Ричардсон Крис Микросервисы. Паттерны разработки и рефакторинга. — СПб.: Питер, 2019. — 544 с.: ил. — (Серия «Библиотека программиста»). ISBN 978-5-4461-0996-8
+
+Copyright 2022 Siarhei Paliachenka, Minsk, Belarus

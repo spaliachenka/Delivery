@@ -1,21 +1,51 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <EnforceCodeStyleInBuild>False</EnforceCodeStyleInBuild>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<Product>FastMeal</Product>
+		<RepositoryUrl>https://github.com/spaliachenka/FastMeal</RepositoryUrl>
+		<PackageTags>editorconfig, analyzer</PackageTags>
+		<PackageId>FastMeal.Common.CodeStyle</PackageId>
+		<Authors>Siarhei Paliachenka</Authors>
+		<IsPackable>true</IsPackable>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<IncludeSource>true</IncludeSource>
+		<NoDefaultExcludes>true</NoDefaultExcludes>
+		<Version>1.0.10</Version>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.CodeStyle" Version="4.0.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
+	<Target Name="CopyPropsFile" BeforeTargets="BeforeBuild">
+		<Copy SourceFiles=".\FastMeal.Common.CodeStyle.props" DestinationFiles="build\FastMeal.Common.CodeStyle.props" SkipUnchangedFiles="true" UseHardlinksIfPossible="false" />
+	</Target>
+
+	<Target Name="CopyEditorconfigFile" BeforeTargets="BeforeBuild">
+		<Copy SourceFiles=".\.editorconfig" DestinationFiles="build\.editorconfig" SkipUnchangedFiles="true" UseHardlinksIfPossible="false" />
+	</Target>
+
+	<Target Name="CopyGlobalUsingsFile" BeforeTargets="BeforeBuild">
+		<Copy SourceFiles=".\GlobalUsings.cs" DestinationFiles="build\GlobalUsings.cs" SkipUnchangedFiles="true" UseHardlinksIfPossible="false" />
+	</Target>
+
+	<!-- Select the MSBuild props and composed files to pack -->
+	<ItemGroup>
+		<Content Include="build\FastMeal.Common.CodeStyle.props" Pack="true" PackagePath="build\"></Content>
+		<Content Include="build\.editorconfig" Pack="true" PackagePath="build\"></Content>
+		<Content Include="build\GlobalUsings.cs" Pack="true" PackagePath="build\"></Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.CodeStyle" Version="4.0.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
 
 </Project>

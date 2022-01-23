@@ -12,11 +12,12 @@ namespace FastMeal.OrderService.Domain.Models
             this.orderRepository = orderRepository;
         }
 
-        public long CreateOrder(OrderDetails orderDetails)
+        public Order CreateOrder(OrderDetails orderDetails)
         {
             var order = Order.CreateOrder(orderDetails);
-            var id = orderRepository.Save(order);
+            orderRepository.Save(order);
 
+            return order;
         }
 
         public void ApproveOrder(long orderId)
@@ -28,7 +29,7 @@ namespace FastMeal.OrderService.Domain.Models
 
         public void CancelOrder(long orderId)
         {
-
+            throw new NotImplementedException();
         }
 
         public void RejectOrder(long orderId)
